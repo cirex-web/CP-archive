@@ -1,21 +1,2 @@
 /.vscode
-/1684.exe
-/cheer.exe
-/cookie.exe
-/destroy.exe
-/discard.exe
-/elbow.exe
-/excellence.exe
-/geography.exe
-/knight.exe
-/ksums.exe
-/ladder.exe
-/next copy.exe
-/next.exe
-/party.exe
-/perfect copy.exe
-/perfect.exe
-/racinggems.exe
-/test.exe
-/thread.exe
-/word.exe
+*.exe
