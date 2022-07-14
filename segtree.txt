@@ -1,0 +1,13 @@
+
+
+
+check the bounds
+
+
+doens't fit? push
+update sum or whatever
+
+
+push 
+- create nodes if not there
+- push down lazy value (and increment children) if value present
