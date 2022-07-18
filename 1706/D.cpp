@@ -1,0 +1,133 @@
+//coding in the freezer
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+template <class ...Args>
+auto &read(Args &...args) { return (cin >> ... >> args); }
+ 
+#define READ(...) __VA_ARGS__; read(__VA_ARGS__)
+ 
+#define mp(a,b)(make_pair(a,b))
+#define pb(a) push_back(a)
+#define FORE(i,a,b) for (int i = (a); i <= (b); ++i)
+#define FOR(i,a,b) for (int i = (a); i < (b); ++i)
+#define ROF(i,a,b) for (int i = (a); i >= (b); --i)
+#define RF(i,a) ROF(i,a,0)
+#define FR(i,a) FOR(i,0,a)
+#define FRE(i,a) FORE(i,0,a)
+ 
+#define fast ios::sync_with_stdio(0);cin.tie(0)
+#define sz(x) ((int)(x.size()))
+#define f first
+#define s second
+ 
+#define all(x) x.begin(), x.end()
+#define rall(x) x.rbegin(), x.rend()
+#define in(r,R) (r>=0&&r<R)
+ 
+using ll = long long;
+using ull = unsigned long long;
+using vi = vector<int>;
+using vl = vector<ll>;
+using vd = vector<double>;
+using vvi = vector<vi>;
+using vvd = vector<vd>;
+using vvl = vector<vl>;
+using pii = pair<int, int>;
+using pll = pair<ll, ll>;
+using pdd = pair<double, double>;
+ 
+using vs = vector<string>;
+using vb = vector<bool>;
+using vvb = vector<vb>;
+using vvs = vector<vs>;
+using vpii = vector<pii>;
+using vvpii = vector<vpii>;
+using vvvi = vector<vvi>; //are you sure about this?
+using vvvl = vector<vvl>; //are you sure about this?
+ 
+ 
+ 
+ll MOD = 1000000007;
+ 
+ 
+template <typename T> void setmax(T& a, T b) { if (b > a) a = b; }
+template <typename T> void setmin(T& a, T b) { if (b < a) a = b; }
+
+/*
+1
+6 56
+54 286 527 1436 2450 2681
+
+
+*/
+int main(){
+    int READ(T);
+    FR(t,T){
+        int READ(N,K);
+        vi ar(N);
+        int mx = 0;
+        FR(i,N){
+            cin>>ar[i];
+            setmax(mx,ar[i]);
+        }
+        auto test = [&](int center){
+            int l = INT_MAX,r=0;
+            // cerr<<center<<endl;
+            for(int n:ar){
+                int res = n;
+                if(center<=0){
+                    res = n/K; //going small
+                }else if(center<=n){
+
+                    int fac = n/center; //>= center
+                    int r1 = n/fac,r2 = n/(fac+1);
+
+                    if(abs(r1-center)>abs(r2-center)){
+                        res = r2;
+                    }else{
+                        res = r1;
+                    }
+                }
+                setmin(res,n);
+                setmax(res,n/K); //bound it
+
+
+                
+                setmin(l,res);
+                setmax(r,res);
+                
+                
+            }
+            // if(r-l==0)cout<<center<<endl;
+            // cerr<<center<<": "<<r-l<<endl;
+            return r-l;
+        };
+        int l = 0,r = mx+1;
+        // bool dec = 1;
+        // FOR(center,l,r){
+        //     int a = test(center), b = test(center-1);
+        //     if(b<a){
+        //         dec = 0;
+        //     }else{
+        //         assert(dec);
+        //     }
+        //     // cerr<<center<<" "<<<<" "<<test(center-1)<<endl;
+        //     // assert(test(center)>=test(center-1));
+        // }
+        while(l<=r){
+            int m1 = l+(r-l)/3;
+            int m2 = r-(r-l)/3;
+            if(test(m1)>test(m2)){
+                l = m1+1;
+            }else{
+                r = m2-1;
+            }
+        }
+        int aprox = INT_MAX;
+        FOR(i,l-1000,r+1000)setmin(aprox,test(i));
+        cout<<aprox<<endl;
+    }
+    return 0;
+}
