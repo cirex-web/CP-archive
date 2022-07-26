@@ -1,0 +1,114 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "UCF",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cookie::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cookie-Debug-4bfd0df32f57716bb729.json",
+					"name" : "cookie",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "discard::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-discard-Debug-2d985181341c1f4d5050.json",
+					"name" : "discard",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "elbow::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-elbow-Debug-d2bad977e9a763212ede.json",
+					"name" : "elbow",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "excellence::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-excellence-Debug-f0c83a2ab82f4d4032e6.json",
+					"name" : "excellence",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "geography::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-geography-Debug-e5a195035440067a3296.json",
+					"name" : "geography",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "knight::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-knight-Debug-f6c6cd124c163560fbe7.json",
+					"name" : "knight",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "treerotations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-treerotations-Debug-efbe545f868ba0f5ecd4.json",
+					"name" : "treerotations",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/work/CLionProjects/UCF/cmake-build-debug",
+		"source" : "/Users/work/CLionProjects/UCF"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
