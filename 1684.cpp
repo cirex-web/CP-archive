@@ -139,7 +139,8 @@ struct Node{
 
 struct BIT{
 	vl ar;
-	BIT(int N){
+
+    [[maybe_unused]] BIT(int N){
 		ar.resize(N+1,0);
 	}
 	void add(int i, int amount){

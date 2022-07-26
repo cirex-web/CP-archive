@@ -16,7 +16,8 @@ using namespace std;
 
 struct BIT{
     vi ar;
-    BIT(int N){
+
+    [[maybe_unused]] BIT(int N){
         ar.resize(N+1,0);
     }
     void upd(int i, int mask){

@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
-
+#include <iomanip>
 using namespace std;
 #define FOR(i,a,b) for(int i = (a); i<(b); i++)
 #define FR(i,a) FOR(i,0,a)
 #define sz(a) ((int)a.size())
-#define ROF(i,a,b) for(int i = (a); i>=(b);i--)
+#define ROF(i,a,b) for(int (i) = (a); i>=(b);i--)
 #define all(a) a.begin(),a.end()
 using vi = vector<int>;
 using ll = long long;

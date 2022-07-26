@@ -61,7 +61,7 @@ struct node{
             lazy = 0;
             sum = 0;
             // sum = prefix[r+1]-prefix[l]; 
-            // cerr<<l<<" "<<r<<" "<<sum<<endl;
+//             cerr<<l<<" "<<r<<" "<<sum<<endl;
             return;
         }
         push();
@@ -199,6 +199,7 @@ int main(){
             og_min_root->increment(i,i,cur);
             min_root.increment(i,i,cur);
         }
+        cout<<prefix[999];
         // FR(i,N)cout<<min_root.get(i,i+1)<<endl;
         FR(q,Q){
             char t; int l,r;cin>>t>>l>>r;l--;r--;
