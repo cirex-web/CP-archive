@@ -32,29 +32,26 @@ int main(){
             int a,b;cin>>a>>b;a--;b--;
             g[a].push_back(b); g[b].push_back(a);
         }
-        vi cnt(N,-1);
-        int timer = 0;
         ll ans = 1;
-
+        vi nums(N,-1);
         function<void(int,int)> dfs = [&](int a, int par){
-            cnt[a]=timer++;
-            cerr<<a<<endl;
+            if(par!=-1)nums[a] = nums[par] + 1;
+            else nums[a] = 0;
             for(int b:g[a]){
                 if(b==par)continue;
-                if(cnt[b]!=-1){
-                    //cycle!
-                    cerr<<a<<"->"<<b<<endl;
-                    // if(cnt[a]<cnt[b])continue;
-                    ans=ans*(cnt[a]-cnt[b]+1)%1007;
+                if(nums[b]!=-1){
+                    //cycle
+//                    cerr<<a<<"->"<<b<<endl;
+                    ans*=max(1,nums[a]-nums[b]+1); //prevent going back onto a cycle
+                    ans%=1007;
                 }else{
                     dfs(b,a);
-                    cnt[a] = timer-1; //just resetting
                 }
             }
         };
-        dfs(1,-1);
+        dfs(0,-1);
         cout<<"Case #"<<t+1<<": "<<ans<<endl;
-        if(t<T-1)cout<<endl;
+        cout<<endl;
     }
     return 0;
 }

@@ -3,6 +3,9 @@ project(UCF)
 
 set(CMAKE_CXX_STANDARD 17)
 
+set(GCC_COVERAGE_COMPILE_FLAGS "-include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -Wl ")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}" )
+
 include_directories(.)
 include_directories(1706)
 include_directories(C3)
@@ -10,11 +13,18 @@ include_directories(C4)
 include_directories(C5)
 include_directories(practice)
 
-add_executable(discard discard.cpp)
-add_executable(elbow elbow.cpp)
-add_executable(excellence excellence.cpp)
-add_executable(geography geography.cpp)
-add_executable(knight knight.cpp)
+add_executable(discard "UCF Archives/discard.cpp")
+add_executable(elbow "UCF Archives/elbow.cpp")
+add_executable(excellence "UCF Archives/excellence.cpp")
+add_executable(geography "UCF Archives/geography.cpp")
+add_executable(knight "UCF Archives/knight.cpp")
 
 add_executable(treerotations practice/treerotations.cpp)
-add_executable(cookie cookie.cpp)
+add_executable(cookie "UCF Archives/cookie.cpp")
+
+
+
+add_executable(cactus practice/cactus.cpp)
+
+
+add_executable(103109A "Random CF/103109A.cpp")

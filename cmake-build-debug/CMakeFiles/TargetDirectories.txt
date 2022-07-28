@@ -5,5 +5,7 @@
 /Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/knight.dir
 /Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/treerotations.dir
 /Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/cookie.dir
+/Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/cactus.dir
+/Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/103109A.dir
 /Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -24,11 +24,12 @@ struct branch{
 struct BIT{
     map<int,int> ar;vi nums;int N;
 
-    explicit BIT(int NVal){
+    BIT(int NVal){
         N = NVal;
     }//what why
     void set(int i){
         nums.push_back(i);
+//        cerr<<i<<endl;
         assert(i>0&&i<=N);
         for(i;i<N+1;i+=i&-i)ar[i]++;
     }
@@ -47,11 +48,13 @@ int main(){
     function<void(branch&)> prop = [&](branch& cur){
         int val;cin>>val;
         if(!val){
+//            cerr<<"make two branches"<<endl;
             cur.left = new branch(); cur.right = new branch();
             prop(*cur.left);
             prop(*cur.right);
         }else{
             cur.val = val;
+//            cerr<<"set!"<<endl;
         }
     };
     prop(root);
@@ -64,13 +67,17 @@ int main(){
             if(sz(a.nums)<sz(b.nums))swap(a,b);
             ll newInversions = sz(b.nums)*sz(a.nums);
             ll inversions = 0;
+//            cerr<<a.nums[0]<<endl;
             for(int num:b.nums){
+//                cerr<<num<<endl;
                 inversions+=a.get(num); //add all of this;
             }
-//            cerr<<inversions<<" "<<newInversions<<endl;
+            cerr<<inversions<<" "<<newInversions<<endl;
             for(int num:b.nums)a.set(num); //add them in now
             ans+=min(inversions,newInversions-inversions);
+
 //            cerr<<"return "<<&a<<endl;
+
             return a;
         }else{
             BIT* cur = new BIT(N);
@@ -94,5 +101,29 @@ int main(){
 0
 2
 1
+
+
+5
+0
+0
+0
+1
+2
+0
+3
+4
+5
+
+
+ 5
+ 0
+ 0
+ 0
+ 5
+ 3
+ 0
+ 4
+ 2
+ 1
 
 */
