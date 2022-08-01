@@ -325,6 +325,262 @@ build 103109A: CXX_EXECUTABLE_LINKER__103109A_Debug CMakeFiles/103109A.dir/Rando
   TARGET_FILE = 103109A
   TARGET_PDB = 103109A.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target foerst
+
+
+#############################################
+# Order-only phony target for foerst
+
+build cmake_object_order_depends_target_foerst: phony || CMakeFiles/foerst.dir
+
+build CMakeFiles/foerst.dir/practice/foerst.cpp.o: CXX_COMPILER__foerst_Debug /Users/work/CLionProjects/UCF/practice/foerst.cpp || cmake_object_order_depends_target_foerst
+  DEP_FILE = CMakeFiles/foerst.dir/practice/foerst.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/foerst.dir
+  OBJECT_FILE_DIR = CMakeFiles/foerst.dir/practice
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target foerst
+
+
+#############################################
+# Link the executable foerst
+
+build foerst: CXX_EXECUTABLE_LINKER__foerst_Debug CMakeFiles/foerst.dir/practice/foerst.cpp.o
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/foerst.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = foerst
+  TARGET_PDB = foerst.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target discord
+
+
+#############################################
+# Order-only phony target for discord
+
+build cmake_object_order_depends_target_discord: phony || CMakeFiles/discord.dir
+
+build CMakeFiles/discord.dir/practice/discord.cpp.o: CXX_COMPILER__discord_Debug /Users/work/CLionProjects/UCF/practice/discord.cpp || cmake_object_order_depends_target_discord
+  DEP_FILE = CMakeFiles/discord.dir/practice/discord.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/discord.dir
+  OBJECT_FILE_DIR = CMakeFiles/discord.dir/practice
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target discord
+
+
+#############################################
+# Link the executable discord
+
+build discord: CXX_EXECUTABLE_LINKER__discord_Debug CMakeFiles/discord.dir/practice/discord.cpp.o
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/discord.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = discord
+  TARGET_PDB = discord.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target sleepy
+
+
+#############################################
+# Order-only phony target for sleepy
+
+build cmake_object_order_depends_target_sleepy: phony || CMakeFiles/sleepy.dir
+
+build CMakeFiles/sleepy.dir/practice/sleepy.cpp.o: CXX_COMPILER__sleepy_Debug /Users/work/CLionProjects/UCF/practice/sleepy.cpp || cmake_object_order_depends_target_sleepy
+  DEP_FILE = CMakeFiles/sleepy.dir/practice/sleepy.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/sleepy.dir
+  OBJECT_FILE_DIR = CMakeFiles/sleepy.dir/practice
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target sleepy
+
+
+#############################################
+# Link the executable sleepy
+
+build sleepy: CXX_EXECUTABLE_LINKER__sleepy_Debug CMakeFiles/sleepy.dir/practice/sleepy.cpp.o
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/sleepy.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = sleepy
+  TARGET_PDB = sleepy.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target longestlife
+
+
+#############################################
+# Order-only phony target for longestlife
+
+build cmake_object_order_depends_target_longestlife: phony || CMakeFiles/longestlife.dir
+
+build CMakeFiles/longestlife.dir/practice/longestlife.cpp.o: CXX_COMPILER__longestlife_Debug /Users/work/CLionProjects/UCF/practice/longestlife.cpp || cmake_object_order_depends_target_longestlife
+  DEP_FILE = CMakeFiles/longestlife.dir/practice/longestlife.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/longestlife.dir
+  OBJECT_FILE_DIR = CMakeFiles/longestlife.dir/practice
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target longestlife
+
+
+#############################################
+# Link the executable longestlife
+
+build longestlife: CXX_EXECUTABLE_LINKER__longestlife_Debug CMakeFiles/longestlife.dir/practice/longestlife.cpp.o
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/longestlife.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = longestlife
+  TARGET_PDB = longestlife.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target comedyshow
+
+
+#############################################
+# Order-only phony target for comedyshow
+
+build cmake_object_order_depends_target_comedyshow: phony || CMakeFiles/comedyshow.dir
+
+build CMakeFiles/comedyshow.dir/practice/comedyshow.cpp.o: CXX_COMPILER__comedyshow_Debug /Users/work/CLionProjects/UCF/practice/comedyshow.cpp || cmake_object_order_depends_target_comedyshow
+  DEP_FILE = CMakeFiles/comedyshow.dir/practice/comedyshow.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/comedyshow.dir
+  OBJECT_FILE_DIR = CMakeFiles/comedyshow.dir/practice
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target comedyshow
+
+
+#############################################
+# Link the executable comedyshow
+
+build comedyshow: CXX_EXECUTABLE_LINKER__comedyshow_Debug CMakeFiles/comedyshow.dir/practice/comedyshow.cpp.o
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/comedyshow.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = comedyshow
+  TARGET_PDB = comedyshow.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target uncertainty
+
+
+#############################################
+# Order-only phony target for uncertainty
+
+build cmake_object_order_depends_target_uncertainty: phony || CMakeFiles/uncertainty.dir
+
+build CMakeFiles/uncertainty.dir/practice/uncertainty-data/uncertainty.cpp.o: CXX_COMPILER__uncertainty_Debug /Users/work/CLionProjects/UCF/practice/uncertainty-data/uncertainty.cpp || cmake_object_order_depends_target_uncertainty
+  DEP_FILE = CMakeFiles/uncertainty.dir/practice/uncertainty-data/uncertainty.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/uncertainty.dir
+  OBJECT_FILE_DIR = CMakeFiles/uncertainty.dir/practice/uncertainty-data
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target uncertainty
+
+
+#############################################
+# Link the executable uncertainty
+
+build uncertainty: CXX_EXECUTABLE_LINKER__uncertainty_Debug CMakeFiles/uncertainty.dir/practice/uncertainty-data/uncertainty.cpp.o
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/uncertainty.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = uncertainty
+  TARGET_PDB = uncertainty.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target raffle
+
+
+#############################################
+# Order-only phony target for raffle
+
+build cmake_object_order_depends_target_raffle: phony || CMakeFiles/raffle.dir
+
+build CMakeFiles/raffle.dir/practice/raffle.cpp.o: CXX_COMPILER__raffle_Debug /Users/work/CLionProjects/UCF/practice/raffle.cpp || cmake_object_order_depends_target_raffle
+  DEP_FILE = CMakeFiles/raffle.dir/practice/raffle.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/raffle.dir
+  OBJECT_FILE_DIR = CMakeFiles/raffle.dir/practice
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target raffle
+
+
+#############################################
+# Link the executable raffle
+
+build raffle: CXX_EXECUTABLE_LINKER__raffle_Debug CMakeFiles/raffle.dir/practice/raffle.cpp.o
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/raffle.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = raffle
+  TARGET_PDB = raffle.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target median
+
+
+#############################################
+# Order-only phony target for median
+
+build cmake_object_order_depends_target_median: phony || CMakeFiles/median.dir
+
+build CMakeFiles/median.dir/practice/median.cpp.o: CXX_COMPILER__median_Debug /Users/work/CLionProjects/UCF/practice/median.cpp || cmake_object_order_depends_target_median
+  DEP_FILE = CMakeFiles/median.dir/practice/median.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/median.dir
+  OBJECT_FILE_DIR = CMakeFiles/median.dir/practice
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target median
+
+
+#############################################
+# Link the executable median
+
+build median: CXX_EXECUTABLE_LINKER__median_Debug CMakeFiles/median.dir/practice/median.cpp.o
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/median.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = median
+  TARGET_PDB = median.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -359,7 +615,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/work/CLionProjects/UCF/cmake-build-debug
 
-build all: phony discard elbow excellence geography knight treerotations cookie cactus 103109A
+build all: phony discard elbow excellence geography knight treerotations cookie cactus 103109A foerst discord sleepy longestlife comedyshow uncertainty raffle median
 
 # =============================================================================
 # Built-in targets

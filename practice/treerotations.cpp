@@ -41,41 +41,49 @@ struct BIT{
 
     }
 };
+void IO(string fileName) {
+    freopen((fileName + ".in").c_str(), "r", stdin);
+    freopen((fileName + ".out").c_str(), "w", stdout);
+}
 int main(){
     ios::sync_with_stdio(false); cin.tie(0);
     int N; cin>>N;
     branch root;
-    function<void(branch&)> prop = [&](branch& cur){
+    function<void(branch*)> prop = [&](branch* cur){
         int val;cin>>val;
         if(!val){
 //            cerr<<"make two branches"<<endl;
-            cur.left = new branch(); cur.right = new branch();
-            prop(*cur.left);
-            prop(*cur.right);
+            cur->left = new branch(); cur->right = new branch();
+            prop(cur->left);
+            prop(cur->right);
         }else{
-            cur.val = val;
-//            cerr<<"set!"<<endl;
+            cur->val = val;
+//            cerr<<"setnmmmm!"<<endl;
         }
     };
-    prop(root);
+    prop(&root);
     ll ans = 0;
+    cerr<<"generated tree"<<endl;
     //maybe pass it in as & 
     function<BIT(branch&)> dfs = [&](branch& curBranch){
         if(curBranch.left!=nullptr){
             BIT a = dfs(*curBranch.left), b = dfs(*curBranch.right);
 //            cerr<<&a<<" "<<&b<<endl;
             if(sz(a.nums)<sz(b.nums))swap(a,b);
-            ll newInversions = sz(b.nums)*sz(a.nums);
+            ll newInversions = (ll)sz(b.nums)*sz(a.nums);
             ll inversions = 0;
 //            cerr<<a.nums[0]<<endl;
             for(int num:b.nums){
 //                cerr<<num<<endl;
                 inversions+=a.get(num); //add all of this;
             }
-            cerr<<inversions<<" "<<newInversions<<endl;
+//            cerr<<inversions<<" "<<newInversions<<endl;
             for(int num:b.nums)a.set(num); //add them in now
             ans+=min(inversions,newInversions-inversions);
+            if(ans<0){
 
+                cerr<<ans<<" "<<inversions<<" "<<newInversions<<endl;
+            }
 //            cerr<<"return "<<&a<<endl;
 
             return a;

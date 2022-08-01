@@ -7,5 +7,13 @@
 /Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/cookie.dir
 /Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/cactus.dir
 /Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/103109A.dir
+/Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/foerst.dir
+/Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/discord.dir
+/Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/sleepy.dir
+/Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/longestlife.dir
+/Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/comedyshow.dir
+/Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/uncertainty.dir
+/Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/raffle.dir
+/Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/median.dir
 /Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/work/CLionProjects/UCF/cmake-build-debug/CMakeFiles/rebuild_cache.dir
