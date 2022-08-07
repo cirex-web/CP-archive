@@ -48,7 +48,7 @@ build cmake_object_order_depends_target_discard: phony || CMakeFiles/discard.dir
 
 build CMakeFiles/discard.dir/UCF_Archives/discard.cpp.o: CXX_COMPILER__discard_Debug /Users/work/CLionProjects/UCF/UCF$ Archives/discard.cpp || cmake_object_order_depends_target_discard
   DEP_FILE = CMakeFiles/discard.dir/UCF_Archives/discard.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/discard.dir
   OBJECT_FILE_DIR = CMakeFiles/discard.dir/UCF_Archives
@@ -62,7 +62,7 @@ build CMakeFiles/discard.dir/UCF_Archives/discard.cpp.o: CXX_COMPILER__discard_D
 # Link the executable discard
 
 build discard: CXX_EXECUTABLE_LINKER__discard_Debug CMakeFiles/discard.dir/UCF_Archives/discard.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/discard.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -80,7 +80,7 @@ build cmake_object_order_depends_target_elbow: phony || CMakeFiles/elbow.dir
 
 build CMakeFiles/elbow.dir/UCF_Archives/elbow.cpp.o: CXX_COMPILER__elbow_Debug /Users/work/CLionProjects/UCF/UCF$ Archives/elbow.cpp || cmake_object_order_depends_target_elbow
   DEP_FILE = CMakeFiles/elbow.dir/UCF_Archives/elbow.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/elbow.dir
   OBJECT_FILE_DIR = CMakeFiles/elbow.dir/UCF_Archives
@@ -94,7 +94,7 @@ build CMakeFiles/elbow.dir/UCF_Archives/elbow.cpp.o: CXX_COMPILER__elbow_Debug /
 # Link the executable elbow
 
 build elbow: CXX_EXECUTABLE_LINKER__elbow_Debug CMakeFiles/elbow.dir/UCF_Archives/elbow.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/elbow.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -112,7 +112,7 @@ build cmake_object_order_depends_target_excellence: phony || CMakeFiles/excellen
 
 build CMakeFiles/excellence.dir/UCF_Archives/excellence.cpp.o: CXX_COMPILER__excellence_Debug /Users/work/CLionProjects/UCF/UCF$ Archives/excellence.cpp || cmake_object_order_depends_target_excellence
   DEP_FILE = CMakeFiles/excellence.dir/UCF_Archives/excellence.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/excellence.dir
   OBJECT_FILE_DIR = CMakeFiles/excellence.dir/UCF_Archives
@@ -126,7 +126,7 @@ build CMakeFiles/excellence.dir/UCF_Archives/excellence.cpp.o: CXX_COMPILER__exc
 # Link the executable excellence
 
 build excellence: CXX_EXECUTABLE_LINKER__excellence_Debug CMakeFiles/excellence.dir/UCF_Archives/excellence.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/excellence.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -144,7 +144,7 @@ build cmake_object_order_depends_target_geography: phony || CMakeFiles/geography
 
 build CMakeFiles/geography.dir/UCF_Archives/geography.cpp.o: CXX_COMPILER__geography_Debug /Users/work/CLionProjects/UCF/UCF$ Archives/geography.cpp || cmake_object_order_depends_target_geography
   DEP_FILE = CMakeFiles/geography.dir/UCF_Archives/geography.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/geography.dir
   OBJECT_FILE_DIR = CMakeFiles/geography.dir/UCF_Archives
@@ -158,7 +158,7 @@ build CMakeFiles/geography.dir/UCF_Archives/geography.cpp.o: CXX_COMPILER__geogr
 # Link the executable geography
 
 build geography: CXX_EXECUTABLE_LINKER__geography_Debug CMakeFiles/geography.dir/UCF_Archives/geography.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/geography.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -176,7 +176,7 @@ build cmake_object_order_depends_target_knight: phony || CMakeFiles/knight.dir
 
 build CMakeFiles/knight.dir/UCF_Archives/knight.cpp.o: CXX_COMPILER__knight_Debug /Users/work/CLionProjects/UCF/UCF$ Archives/knight.cpp || cmake_object_order_depends_target_knight
   DEP_FILE = CMakeFiles/knight.dir/UCF_Archives/knight.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/knight.dir
   OBJECT_FILE_DIR = CMakeFiles/knight.dir/UCF_Archives
@@ -190,7 +190,7 @@ build CMakeFiles/knight.dir/UCF_Archives/knight.cpp.o: CXX_COMPILER__knight_Debu
 # Link the executable knight
 
 build knight: CXX_EXECUTABLE_LINKER__knight_Debug CMakeFiles/knight.dir/UCF_Archives/knight.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/knight.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -208,7 +208,7 @@ build cmake_object_order_depends_target_treerotations: phony || CMakeFiles/treer
 
 build CMakeFiles/treerotations.dir/practice/treerotations.cpp.o: CXX_COMPILER__treerotations_Debug /Users/work/CLionProjects/UCF/practice/treerotations.cpp || cmake_object_order_depends_target_treerotations
   DEP_FILE = CMakeFiles/treerotations.dir/practice/treerotations.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/treerotations.dir
   OBJECT_FILE_DIR = CMakeFiles/treerotations.dir/practice
@@ -222,7 +222,7 @@ build CMakeFiles/treerotations.dir/practice/treerotations.cpp.o: CXX_COMPILER__t
 # Link the executable treerotations
 
 build treerotations: CXX_EXECUTABLE_LINKER__treerotations_Debug CMakeFiles/treerotations.dir/practice/treerotations.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/treerotations.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -240,7 +240,7 @@ build cmake_object_order_depends_target_cookie: phony || CMakeFiles/cookie.dir
 
 build CMakeFiles/cookie.dir/UCF_Archives/cookie.cpp.o: CXX_COMPILER__cookie_Debug /Users/work/CLionProjects/UCF/UCF$ Archives/cookie.cpp || cmake_object_order_depends_target_cookie
   DEP_FILE = CMakeFiles/cookie.dir/UCF_Archives/cookie.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/cookie.dir
   OBJECT_FILE_DIR = CMakeFiles/cookie.dir/UCF_Archives
@@ -254,7 +254,7 @@ build CMakeFiles/cookie.dir/UCF_Archives/cookie.cpp.o: CXX_COMPILER__cookie_Debu
 # Link the executable cookie
 
 build cookie: CXX_EXECUTABLE_LINKER__cookie_Debug CMakeFiles/cookie.dir/UCF_Archives/cookie.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/cookie.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -272,7 +272,7 @@ build cmake_object_order_depends_target_cactus: phony || CMakeFiles/cactus.dir
 
 build CMakeFiles/cactus.dir/practice/cactus.cpp.o: CXX_COMPILER__cactus_Debug /Users/work/CLionProjects/UCF/practice/cactus.cpp || cmake_object_order_depends_target_cactus
   DEP_FILE = CMakeFiles/cactus.dir/practice/cactus.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/cactus.dir
   OBJECT_FILE_DIR = CMakeFiles/cactus.dir/practice
@@ -286,7 +286,7 @@ build CMakeFiles/cactus.dir/practice/cactus.cpp.o: CXX_COMPILER__cactus_Debug /U
 # Link the executable cactus
 
 build cactus: CXX_EXECUTABLE_LINKER__cactus_Debug CMakeFiles/cactus.dir/practice/cactus.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/cactus.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -304,7 +304,7 @@ build cmake_object_order_depends_target_103109A: phony || CMakeFiles/103109A.dir
 
 build CMakeFiles/103109A.dir/Random_CF/103109A.cpp.o: CXX_COMPILER__103109A_Debug /Users/work/CLionProjects/UCF/Random$ CF/103109A.cpp || cmake_object_order_depends_target_103109A
   DEP_FILE = CMakeFiles/103109A.dir/Random_CF/103109A.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/103109A.dir
   OBJECT_FILE_DIR = CMakeFiles/103109A.dir/Random_CF
@@ -318,7 +318,7 @@ build CMakeFiles/103109A.dir/Random_CF/103109A.cpp.o: CXX_COMPILER__103109A_Debu
 # Link the executable 103109A
 
 build 103109A: CXX_EXECUTABLE_LINKER__103109A_Debug CMakeFiles/103109A.dir/Random_CF/103109A.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/103109A.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -336,7 +336,7 @@ build cmake_object_order_depends_target_foerst: phony || CMakeFiles/foerst.dir
 
 build CMakeFiles/foerst.dir/practice/foerst.cpp.o: CXX_COMPILER__foerst_Debug /Users/work/CLionProjects/UCF/practice/foerst.cpp || cmake_object_order_depends_target_foerst
   DEP_FILE = CMakeFiles/foerst.dir/practice/foerst.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/foerst.dir
   OBJECT_FILE_DIR = CMakeFiles/foerst.dir/practice
@@ -350,7 +350,7 @@ build CMakeFiles/foerst.dir/practice/foerst.cpp.o: CXX_COMPILER__foerst_Debug /U
 # Link the executable foerst
 
 build foerst: CXX_EXECUTABLE_LINKER__foerst_Debug CMakeFiles/foerst.dir/practice/foerst.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/foerst.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -368,7 +368,7 @@ build cmake_object_order_depends_target_discord: phony || CMakeFiles/discord.dir
 
 build CMakeFiles/discord.dir/practice/discord.cpp.o: CXX_COMPILER__discord_Debug /Users/work/CLionProjects/UCF/practice/discord.cpp || cmake_object_order_depends_target_discord
   DEP_FILE = CMakeFiles/discord.dir/practice/discord.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/discord.dir
   OBJECT_FILE_DIR = CMakeFiles/discord.dir/practice
@@ -382,7 +382,7 @@ build CMakeFiles/discord.dir/practice/discord.cpp.o: CXX_COMPILER__discord_Debug
 # Link the executable discord
 
 build discord: CXX_EXECUTABLE_LINKER__discord_Debug CMakeFiles/discord.dir/practice/discord.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/discord.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -400,7 +400,7 @@ build cmake_object_order_depends_target_sleepy: phony || CMakeFiles/sleepy.dir
 
 build CMakeFiles/sleepy.dir/practice/sleepy.cpp.o: CXX_COMPILER__sleepy_Debug /Users/work/CLionProjects/UCF/practice/sleepy.cpp || cmake_object_order_depends_target_sleepy
   DEP_FILE = CMakeFiles/sleepy.dir/practice/sleepy.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/sleepy.dir
   OBJECT_FILE_DIR = CMakeFiles/sleepy.dir/practice
@@ -414,7 +414,7 @@ build CMakeFiles/sleepy.dir/practice/sleepy.cpp.o: CXX_COMPILER__sleepy_Debug /U
 # Link the executable sleepy
 
 build sleepy: CXX_EXECUTABLE_LINKER__sleepy_Debug CMakeFiles/sleepy.dir/practice/sleepy.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/sleepy.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -432,7 +432,7 @@ build cmake_object_order_depends_target_longestlife: phony || CMakeFiles/longest
 
 build CMakeFiles/longestlife.dir/practice/longestlife.cpp.o: CXX_COMPILER__longestlife_Debug /Users/work/CLionProjects/UCF/practice/longestlife.cpp || cmake_object_order_depends_target_longestlife
   DEP_FILE = CMakeFiles/longestlife.dir/practice/longestlife.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/longestlife.dir
   OBJECT_FILE_DIR = CMakeFiles/longestlife.dir/practice
@@ -446,7 +446,7 @@ build CMakeFiles/longestlife.dir/practice/longestlife.cpp.o: CXX_COMPILER__longe
 # Link the executable longestlife
 
 build longestlife: CXX_EXECUTABLE_LINKER__longestlife_Debug CMakeFiles/longestlife.dir/practice/longestlife.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/longestlife.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -464,7 +464,7 @@ build cmake_object_order_depends_target_comedyshow: phony || CMakeFiles/comedysh
 
 build CMakeFiles/comedyshow.dir/practice/comedyshow.cpp.o: CXX_COMPILER__comedyshow_Debug /Users/work/CLionProjects/UCF/practice/comedyshow.cpp || cmake_object_order_depends_target_comedyshow
   DEP_FILE = CMakeFiles/comedyshow.dir/practice/comedyshow.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/comedyshow.dir
   OBJECT_FILE_DIR = CMakeFiles/comedyshow.dir/practice
@@ -478,7 +478,7 @@ build CMakeFiles/comedyshow.dir/practice/comedyshow.cpp.o: CXX_COMPILER__comedys
 # Link the executable comedyshow
 
 build comedyshow: CXX_EXECUTABLE_LINKER__comedyshow_Debug CMakeFiles/comedyshow.dir/practice/comedyshow.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/comedyshow.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -496,7 +496,7 @@ build cmake_object_order_depends_target_uncertainty: phony || CMakeFiles/uncerta
 
 build CMakeFiles/uncertainty.dir/practice/uncertainty-data/uncertainty.cpp.o: CXX_COMPILER__uncertainty_Debug /Users/work/CLionProjects/UCF/practice/uncertainty-data/uncertainty.cpp || cmake_object_order_depends_target_uncertainty
   DEP_FILE = CMakeFiles/uncertainty.dir/practice/uncertainty-data/uncertainty.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/uncertainty.dir
   OBJECT_FILE_DIR = CMakeFiles/uncertainty.dir/practice/uncertainty-data
@@ -510,7 +510,7 @@ build CMakeFiles/uncertainty.dir/practice/uncertainty-data/uncertainty.cpp.o: CX
 # Link the executable uncertainty
 
 build uncertainty: CXX_EXECUTABLE_LINKER__uncertainty_Debug CMakeFiles/uncertainty.dir/practice/uncertainty-data/uncertainty.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/uncertainty.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -528,7 +528,7 @@ build cmake_object_order_depends_target_raffle: phony || CMakeFiles/raffle.dir
 
 build CMakeFiles/raffle.dir/practice/raffle.cpp.o: CXX_COMPILER__raffle_Debug /Users/work/CLionProjects/UCF/practice/raffle.cpp || cmake_object_order_depends_target_raffle
   DEP_FILE = CMakeFiles/raffle.dir/practice/raffle.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/raffle.dir
   OBJECT_FILE_DIR = CMakeFiles/raffle.dir/practice
@@ -542,7 +542,7 @@ build CMakeFiles/raffle.dir/practice/raffle.cpp.o: CXX_COMPILER__raffle_Debug /U
 # Link the executable raffle
 
 build raffle: CXX_EXECUTABLE_LINKER__raffle_Debug CMakeFiles/raffle.dir/practice/raffle.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/raffle.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -560,7 +560,7 @@ build cmake_object_order_depends_target_median: phony || CMakeFiles/median.dir
 
 build CMakeFiles/median.dir/practice/median.cpp.o: CXX_COMPILER__median_Debug /Users/work/CLionProjects/UCF/practice/median.cpp || cmake_object_order_depends_target_median
   DEP_FILE = CMakeFiles/median.dir/practice/median.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
   OBJECT_DIR = CMakeFiles/median.dir
   OBJECT_FILE_DIR = CMakeFiles/median.dir/practice
@@ -574,12 +574,556 @@ build CMakeFiles/median.dir/practice/median.cpp.o: CXX_COMPILER__median_Debug /U
 # Link the executable median
 
 build median: CXX_EXECUTABLE_LINKER__median_Debug CMakeFiles/median.dir/practice/median.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
   OBJECT_DIR = CMakeFiles/median.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = median
   TARGET_PDB = median.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target C
+
+
+#############################################
+# Order-only phony target for C
+
+build cmake_object_order_depends_target_C: phony || CMakeFiles/C.dir
+
+build CMakeFiles/C.dir/1713/C.cpp.o: CXX_COMPILER__C_Debug /Users/work/CLionProjects/UCF/1713/C.cpp || cmake_object_order_depends_target_C
+  DEP_FILE = CMakeFiles/C.dir/1713/C.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/C.dir
+  OBJECT_FILE_DIR = CMakeFiles/C.dir/1713
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target C
+
+
+#############################################
+# Link the executable C
+
+build C: CXX_EXECUTABLE_LINKER__C_Debug CMakeFiles/C.dir/1713/C.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/C.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = C
+  TARGET_PDB = C.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target G
+
+
+#############################################
+# Order-only phony target for G
+
+build cmake_object_order_depends_target_G: phony || CMakeFiles/G.dir
+
+build CMakeFiles/G.dir/103091/G.cpp.o: CXX_COMPILER__G_Debug /Users/work/CLionProjects/UCF/103091/G.cpp || cmake_object_order_depends_target_G
+  DEP_FILE = CMakeFiles/G.dir/103091/G.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/G.dir
+  OBJECT_FILE_DIR = CMakeFiles/G.dir/103091
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target G
+
+
+#############################################
+# Link the executable G
+
+build G: CXX_EXECUTABLE_LINKER__G_Debug CMakeFiles/G.dir/103091/G.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/G.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = G
+  TARGET_PDB = G.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target B
+
+
+#############################################
+# Order-only phony target for B
+
+build cmake_object_order_depends_target_B: phony || CMakeFiles/B.dir
+
+build CMakeFiles/B.dir/1713/B.cpp.o: CXX_COMPILER__B_Debug /Users/work/CLionProjects/UCF/1713/B.cpp || cmake_object_order_depends_target_B
+  DEP_FILE = CMakeFiles/B.dir/1713/B.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/B.dir
+  OBJECT_FILE_DIR = CMakeFiles/B.dir/1713
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target B
+
+
+#############################################
+# Link the executable B
+
+build B: CXX_EXECUTABLE_LINKER__B_Debug CMakeFiles/B.dir/1713/B.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/B.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = B
+  TARGET_PDB = B.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target A
+
+
+#############################################
+# Order-only phony target for A
+
+build cmake_object_order_depends_target_A: phony || CMakeFiles/A.dir
+
+build CMakeFiles/A.dir/1713/A.cpp.o: CXX_COMPILER__A_Debug /Users/work/CLionProjects/UCF/1713/A.cpp || cmake_object_order_depends_target_A
+  DEP_FILE = CMakeFiles/A.dir/1713/A.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/A.dir
+  OBJECT_FILE_DIR = CMakeFiles/A.dir/1713
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target A
+
+
+#############################################
+# Link the executable A
+
+build A: CXX_EXECUTABLE_LINKER__A_Debug CMakeFiles/A.dir/1713/A.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/A.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = A
+  TARGET_PDB = A.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target E
+
+
+#############################################
+# Order-only phony target for E
+
+build cmake_object_order_depends_target_E: phony || CMakeFiles/E.dir
+
+build CMakeFiles/E.dir/1713/E.cpp.o: CXX_COMPILER__E_Debug /Users/work/CLionProjects/UCF/1713/E.cpp || cmake_object_order_depends_target_E
+  DEP_FILE = CMakeFiles/E.dir/1713/E.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/E.dir
+  OBJECT_FILE_DIR = CMakeFiles/E.dir/1713
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target E
+
+
+#############################################
+# Link the executable E
+
+build E: CXX_EXECUTABLE_LINKER__E_Debug CMakeFiles/E.dir/1713/E.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/E.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = E
+  TARGET_PDB = E.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target F
+
+
+#############################################
+# Order-only phony target for F
+
+build cmake_object_order_depends_target_F: phony || CMakeFiles/F.dir
+
+build CMakeFiles/F.dir/103091/F.cpp.o: CXX_COMPILER__F_Debug /Users/work/CLionProjects/UCF/103091/F.cpp || cmake_object_order_depends_target_F
+  DEP_FILE = CMakeFiles/F.dir/103091/F.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/F.dir
+  OBJECT_FILE_DIR = CMakeFiles/F.dir/103091
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target F
+
+
+#############################################
+# Link the executable F
+
+build F: CXX_EXECUTABLE_LINKER__F_Debug CMakeFiles/F.dir/103091/F.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/F.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = F
+  TARGET_PDB = F.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target H
+
+
+#############################################
+# Order-only phony target for H
+
+build cmake_object_order_depends_target_H: phony || CMakeFiles/H.dir
+
+build CMakeFiles/H.dir/103091/H.cpp.o: CXX_COMPILER__H_Debug /Users/work/CLionProjects/UCF/103091/H.cpp || cmake_object_order_depends_target_H
+  DEP_FILE = CMakeFiles/H.dir/103091/H.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/H.dir
+  OBJECT_FILE_DIR = CMakeFiles/H.dir/103091
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target H
+
+
+#############################################
+# Link the executable H
+
+build H: CXX_EXECUTABLE_LINKER__H_Debug CMakeFiles/H.dir/103091/H.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/H.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = H
+  TARGET_PDB = H.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target K
+
+
+#############################################
+# Order-only phony target for K
+
+build cmake_object_order_depends_target_K: phony || CMakeFiles/K.dir
+
+build CMakeFiles/K.dir/103091/K.cpp.o: CXX_COMPILER__K_Debug /Users/work/CLionProjects/UCF/103091/K.cpp || cmake_object_order_depends_target_K
+  DEP_FILE = CMakeFiles/K.dir/103091/K.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/K.dir
+  OBJECT_FILE_DIR = CMakeFiles/K.dir/103091
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target K
+
+
+#############################################
+# Link the executable K
+
+build K: CXX_EXECUTABLE_LINKER__K_Debug CMakeFiles/K.dir/103091/K.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/K.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = K
+  TARGET_PDB = K.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target L
+
+
+#############################################
+# Order-only phony target for L
+
+build cmake_object_order_depends_target_L: phony || CMakeFiles/L.dir
+
+build CMakeFiles/L.dir/103091/L.cpp.o: CXX_COMPILER__L_Debug /Users/work/CLionProjects/UCF/103091/L.cpp || cmake_object_order_depends_target_L
+  DEP_FILE = CMakeFiles/L.dir/103091/L.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/L.dir
+  OBJECT_FILE_DIR = CMakeFiles/L.dir/103091
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target L
+
+
+#############################################
+# Link the executable L
+
+build L: CXX_EXECUTABLE_LINKER__L_Debug CMakeFiles/L.dir/103091/L.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/L.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = L
+  TARGET_PDB = L.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target N
+
+
+#############################################
+# Order-only phony target for N
+
+build cmake_object_order_depends_target_N: phony || CMakeFiles/N.dir
+
+build CMakeFiles/N.dir/103091/N.cpp.o: CXX_COMPILER__N_Debug /Users/work/CLionProjects/UCF/103091/N.cpp || cmake_object_order_depends_target_N
+  DEP_FILE = CMakeFiles/N.dir/103091/N.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/N.dir
+  OBJECT_FILE_DIR = CMakeFiles/N.dir/103091
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target N
+
+
+#############################################
+# Link the executable N
+
+build N: CXX_EXECUTABLE_LINKER__N_Debug CMakeFiles/N.dir/103091/N.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/N.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = N
+  TARGET_PDB = N.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target D
+
+
+#############################################
+# Order-only phony target for D
+
+build cmake_object_order_depends_target_D: phony || CMakeFiles/D.dir
+
+build CMakeFiles/D.dir/1713/D.cpp.o: CXX_COMPILER__D_Debug /Users/work/CLionProjects/UCF/1713/D.cpp || cmake_object_order_depends_target_D
+  DEP_FILE = CMakeFiles/D.dir/1713/D.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/D.dir
+  OBJECT_FILE_DIR = CMakeFiles/D.dir/1713
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target D
+
+
+#############################################
+# Link the executable D
+
+build D: CXX_EXECUTABLE_LINKER__D_Debug CMakeFiles/D.dir/1713/D.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/D.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = D
+  TARGET_PDB = D.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target J
+
+
+#############################################
+# Order-only phony target for J
+
+build cmake_object_order_depends_target_J: phony || CMakeFiles/J.dir
+
+build CMakeFiles/J.dir/103091/J.cpp.o: CXX_COMPILER__J_Debug /Users/work/CLionProjects/UCF/103091/J.cpp || cmake_object_order_depends_target_J
+  DEP_FILE = CMakeFiles/J.dir/103091/J.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/J.dir
+  OBJECT_FILE_DIR = CMakeFiles/J.dir/103091
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target J
+
+
+#############################################
+# Link the executable J
+
+build J: CXX_EXECUTABLE_LINKER__J_Debug CMakeFiles/J.dir/103091/J.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/J.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = J
+  TARGET_PDB = J.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target I
+
+
+#############################################
+# Order-only phony target for I
+
+build cmake_object_order_depends_target_I: phony || CMakeFiles/I.dir
+
+build CMakeFiles/I.dir/103091/I.cpp.o: CXX_COMPILER__I_Debug /Users/work/CLionProjects/UCF/103091/I.cpp || cmake_object_order_depends_target_I
+  DEP_FILE = CMakeFiles/I.dir/103091/I.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/I.dir
+  OBJECT_FILE_DIR = CMakeFiles/I.dir/103091
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target I
+
+
+#############################################
+# Link the executable I
+
+build I: CXX_EXECUTABLE_LINKER__I_Debug CMakeFiles/I.dir/103091/I.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/I.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = I
+  TARGET_PDB = I.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 671A
+
+
+#############################################
+# Order-only phony target for 671A
+
+build cmake_object_order_depends_target_671A: phony || CMakeFiles/671A.dir
+
+build CMakeFiles/671A.dir/CF/671A.cpp.o: CXX_COMPILER__671A_Debug /Users/work/CLionProjects/UCF/CF/671A.cpp || cmake_object_order_depends_target_671A
+  DEP_FILE = CMakeFiles/671A.dir/CF/671A.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/671A.dir
+  OBJECT_FILE_DIR = CMakeFiles/671A.dir/CF
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 671A
+
+
+#############################################
+# Link the executable 671A
+
+build 671A: CXX_EXECUTABLE_LINKER__671A_Debug CMakeFiles/671A.dir/CF/671A.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/671A.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = 671A
+  TARGET_PDB = 671A.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 280A
+
+
+#############################################
+# Order-only phony target for 280A
+
+build cmake_object_order_depends_target_280A: phony || CMakeFiles/280A.dir
+
+build CMakeFiles/280A.dir/CF/280A.cpp.o: CXX_COMPILER__280A_Debug /Users/work/CLionProjects/UCF/CF/280A.cpp || cmake_object_order_depends_target_280A
+  DEP_FILE = CMakeFiles/280A.dir/CF/280A.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/280A.dir
+  OBJECT_FILE_DIR = CMakeFiles/280A.dir/CF
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 280A
+
+
+#############################################
+# Link the executable 280A
+
+build 280A: CXX_EXECUTABLE_LINKER__280A_Debug CMakeFiles/280A.dir/CF/280A.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/280A.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = 280A
+  TARGET_PDB = 280A.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target where
+
+
+#############################################
+# Order-only phony target for where
+
+build cmake_object_order_depends_target_where: phony || CMakeFiles/where.dir
+
+build CMakeFiles/where.dir/1713/where.cpp.o: CXX_COMPILER__where_Debug /Users/work/CLionProjects/UCF/1713/where.cpp || cmake_object_order_depends_target_where
+  DEP_FILE = CMakeFiles/where.dir/1713/where.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/where.dir
+  OBJECT_FILE_DIR = CMakeFiles/where.dir/1713
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target where
+
+
+#############################################
+# Link the executable where
+
+build where: CXX_EXECUTABLE_LINKER__where_Debug CMakeFiles/where.dir/1713/where.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/where.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = where
+  TARGET_PDB = where.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target dfs
+
+
+#############################################
+# Order-only phony target for dfs
+
+build cmake_object_order_depends_target_dfs: phony || CMakeFiles/dfs.dir
+
+build CMakeFiles/dfs.dir/1706/dfs.cpp.o: CXX_COMPILER__dfs_Debug /Users/work/CLionProjects/UCF/1706/dfs.cpp || cmake_object_order_depends_target_dfs
+  DEP_FILE = CMakeFiles/dfs.dir/1706/dfs.cpp.o.d
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  INCLUDES = -I/Users/work/CLionProjects/UCF/. -I/Users/work/CLionProjects/UCF/1706 -I/Users/work/CLionProjects/UCF/C3 -I/Users/work/CLionProjects/UCF/C4 -I/Users/work/CLionProjects/UCF/C5 -I/Users/work/CLionProjects/UCF/practice
+  OBJECT_DIR = CMakeFiles/dfs.dir
+  OBJECT_FILE_DIR = CMakeFiles/dfs.dir/1706
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target dfs
+
+
+#############################################
+# Link the executable dfs
+
+build dfs: CXX_EXECUTABLE_LINKER__dfs_Debug CMakeFiles/dfs.dir/1706/dfs.cpp.o
+  FLAGS = -std=c++17 -include-pch /Users/work/Documents/C++2/stdc++.h.gch -O2 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+  OBJECT_DIR = CMakeFiles/dfs.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = dfs
+  TARGET_PDB = dfs.dbg
 
 
 #############################################
@@ -615,7 +1159,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/work/CLionProjects/UCF/cmake-build-debug
 
-build all: phony discard elbow excellence geography knight treerotations cookie cactus 103109A foerst discord sleepy longestlife comedyshow uncertainty raffle median
+build all: phony discard elbow excellence geography knight treerotations cookie cactus 103109A foerst discord sleepy longestlife comedyshow uncertainty raffle median C G B A E F H K L N D J I 671A 280A where dfs
 
 # =============================================================================
 # Built-in targets
