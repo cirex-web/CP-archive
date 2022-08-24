@@ -79,91 +79,68 @@ void setmin(T &a, T b) { if (b < a) a = b; }
 
 */
 
-void print(vvi& g){
-    FR(i,sz(g))FR(j,sz(g))cout<<g[i][j]<<" \n"[j==sz(g)-1];
-}
-struct DSU{
-    vi ar;
-    DSU(int N){ //NOLINT
-        ar.resize(N,-1);
-    }
-    int par(int a){
-        return ar[a]<0?a:ar[a]=par(ar[a]);
-    }
-    void merge(int a, int b){
-        a = par(a);
-        b = par(b);
-        if(a!=b){
-            if(ar[a]>ar[b])swap(a,b);
-            ar[a]+=ar[b];
-            ar[b] = a;
-        }
-    }
-};
 int main() {
     fast;
-
     int T; cin>>T;
     FR(t,T){
-        int N; cin>>N;
-        vvi g(N,vi(N));
-        FR(i,N)FR(j,N)cin>>g[i][j];
-        DSU dsu(2*N);
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(g[r][c]>g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c)){
-                        dsu.merge(r,c+N);
-                        dsu.merge(c,r+N);
-                    }
-                }else if(g[r][c]<g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c+N)){
-                        dsu.merge(r,c);
-                        dsu.merge(r+N,c+N);
-                    }
-                }
+        string s; cin>>s; sort(all(s));
+        map<char,int> freq;
+        for(char c: s)freq[c]++;
+
+        char start = '\0';
+//        cerr<<start<<endl;
+        for(auto [c,v]:freq){
+            if(v==1){
+                start = c;
+                swap(s[0],s[s.find(c)]);
+                sort(s.begin()+1,s.end());
+                break;
             }
         }
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(dsu.par(r)==dsu.par(c+N)){
-                    //swap!
-                    swap(g[r][c],g[c][r]);
+        if(start||sz(freq)==1){
+            cout<<s<<endl;
+            continue;
+        }
+
+
+        auto [c1,v1] = *freq.begin();
+        auto [c2,v2] = *next(freq.begin());
+
+        if(v1<=sz(s)-v1+2){
+            //aabababa...
+            s.erase(remove(all(s),c1),s.end());
+            string res(2,c1);v1-=2;
+            int i = 0;
+//            cerr<<s<<endl;
+            while(1){
+                if(res.back()!=c1&&v1){
+                    res+=c1;
+                    v1--;
+                }else{
+                    if(i==sz(s))break;
+                    res+=s[i++];
                 }
             }
+            cout<<res<<endl;
+        }else{
+            if(sz(freq)==2){
+                rotate(s.begin(),s.begin()+v1-1,s.end());
+                cout<<s<<endl;
+
+            }else{
+                auto [c3,v3] = *next(next(freq.begin()));
+                s.erase(s.begin()+s.find(c2));
+                s.erase(s.begin()+s.find(c3));
+                s.erase(std::remove(s.begin(), s.end(),c1),s.end());
+//                cerr<<s<<endl;
+                cout<<string()+c1+c2+string(v1-1,c1)+c3+s<<endl;
+            }
         }
-        print(g);
+
 
     }
+
     return 0;
 }
-
-/*
- *
-1
-3
-2 2 2
-1 2 2
-1 1 2
-
-1
-5
-0 1 1 1 1
-0 0 1 1 1
-0 0 0 1 1
-1 1 1 0 0
-0 1 1 1 0
-
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
- */
+// bbccc
+// bbcccddd

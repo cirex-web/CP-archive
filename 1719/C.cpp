@@ -79,91 +79,46 @@ void setmin(T &a, T b) { if (b < a) a = b; }
 
 */
 
-void print(vvi& g){
-    FR(i,sz(g))FR(j,sz(g))cout<<g[i][j]<<" \n"[j==sz(g)-1];
-}
-struct DSU{
-    vi ar;
-    DSU(int N){ //NOLINT
-        ar.resize(N,-1);
-    }
-    int par(int a){
-        return ar[a]<0?a:ar[a]=par(ar[a]);
-    }
-    void merge(int a, int b){
-        a = par(a);
-        b = par(b);
-        if(a!=b){
-            if(ar[a]>ar[b])swap(a,b);
-            ar[a]+=ar[b];
-            ar[b] = a;
-        }
-    }
-};
 int main() {
     fast;
-
     int T; cin>>T;
     FR(t,T){
-        int N; cin>>N;
-        vvi g(N,vi(N));
-        FR(i,N)FR(j,N)cin>>g[i][j];
-        DSU dsu(2*N);
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(g[r][c]>g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c)){
-                        dsu.merge(r,c+N);
-                        dsu.merge(c,r+N);
-                    }
-                }else if(g[r][c]<g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c+N)){
-                        dsu.merge(r,c);
-                        dsu.merge(r+N,c+N);
-                    }
-                }
-            }
+        int READ(N,Q);
+        vpii players;
+        FR(i,N){
+            int READ(n);
+            players.pb(mp(n,i));
         }
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(dsu.par(r)==dsu.par(c+N)){
-                    //swap!
-                    swap(g[r][c],g[c][r]);
+        sort(all(players)); reverse(all(players));
+        set<int> larger;
+        vi wins(N,-1);
+        for(auto [n,i]: players){
+            if(larger.lower_bound(i)!=larger.begin()){
+                wins[i] = 0;
+            }else{
+                auto ptr = larger.lower_bound(i);
+                if(ptr!=larger.end()){
+                    wins[i] = (*ptr)-i;
+                    if(i==0)wins[i]--;
+                }else{
+                    wins[i] = INT_MAX;
                 }
+                //if i==0, different!
             }
+            larger.insert(i);
         }
-        print(g);
+//        FR(i,N)cerr<<wins[i]<<" ";
+//        cerr<<endl;
+        FR(q,Q){
+            int READ(i,k);i--;
+            int start = i; //round when you start winning
+            if(i==0)start++;
+            cout<<max(0,min(k-start+1,wins[i]))<<endl;
+        }
+
+        //be careful with the i=0 case
 
     }
+
     return 0;
 }
-
-/*
- *
-1
-3
-2 2 2
-1 2 2
-1 1 2
-
-1
-5
-0 1 1 1 1
-0 0 1 1 1
-0 0 0 1 1
-1 1 1 0 0
-0 1 1 1 0
-
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
- */

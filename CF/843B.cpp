@@ -2,7 +2,7 @@
 
 
 #include <bits/stdc++.h>
-
+#include <random>
 using namespace std;
 
 template<class ...Args>
@@ -79,91 +79,31 @@ void setmin(T &a, T b) { if (b < a) a = b; }
 
 */
 
-void print(vvi& g){
-    FR(i,sz(g))FR(j,sz(g))cout<<g[i][j]<<" \n"[j==sz(g)-1];
-}
-struct DSU{
-    vi ar;
-    DSU(int N){ //NOLINT
-        ar.resize(N,-1);
-    }
-    int par(int a){
-        return ar[a]<0?a:ar[a]=par(ar[a]);
-    }
-    void merge(int a, int b){
-        a = par(a);
-        b = par(b);
-        if(a!=b){
-            if(ar[a]>ar[b])swap(a,b);
-            ar[a]+=ar[b];
-            ar[b] = a;
-        }
-    }
-};
 int main() {
     fast;
+    mt19937 rng(time(0));
+    int READ(N,start,X);
+    pii gi = {-1,start};
+    FR(i,995){
+        int n = uniform_int_distribution<int>(1,N)(rng);
+        cout<<"? "<<n<<endl;
+        int READ(v,nxt);
+        if(v<X){
+            gi = max(gi,mp(v,n));
+        }
+    }
+    int nxt = gi.s;
 
-    int T; cin>>T;
-    FR(t,T){
-        int N; cin>>N;
-        vvi g(N,vi(N));
-        FR(i,N)FR(j,N)cin>>g[i][j];
-        DSU dsu(2*N);
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(g[r][c]>g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c)){
-                        dsu.merge(r,c+N);
-                        dsu.merge(c,r+N);
-                    }
-                }else if(g[r][c]<g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c+N)){
-                        dsu.merge(r,c);
-                        dsu.merge(r+N,c+N);
-                    }
-                }
-            }
+    while(nxt!=-1){
+        cout<<"? "<<nxt<<endl;
+        int READ(val);
+        if(val>=X){
+            cout<<"! "<<val<<endl;
+            exit(0);
         }
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(dsu.par(r)==dsu.par(c+N)){
-                    //swap!
-                    swap(g[r][c],g[c][r]);
-                }
-            }
-        }
-        print(g);
+        cin>>nxt;
 
     }
+    cout<<"! -1"<<endl;
     return 0;
 }
-
-/*
- *
-1
-3
-2 2 2
-1 2 2
-1 1 2
-
-1
-5
-0 1 1 1 1
-0 0 1 1 1
-0 0 0 1 1
-1 1 1 0 0
-0 1 1 1 0
-
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
- */

@@ -79,91 +79,39 @@ void setmin(T &a, T b) { if (b < a) a = b; }
 
 */
 
-void print(vvi& g){
-    FR(i,sz(g))FR(j,sz(g))cout<<g[i][j]<<" \n"[j==sz(g)-1];
-}
-struct DSU{
-    vi ar;
-    DSU(int N){ //NOLINT
-        ar.resize(N,-1);
-    }
-    int par(int a){
-        return ar[a]<0?a:ar[a]=par(ar[a]);
-    }
-    void merge(int a, int b){
-        a = par(a);
-        b = par(b);
-        if(a!=b){
-            if(ar[a]>ar[b])swap(a,b);
-            ar[a]+=ar[b];
-            ar[b] = a;
-        }
-    }
-};
 int main() {
     fast;
-
-    int T; cin>>T;
-    FR(t,T){
-        int N; cin>>N;
-        vvi g(N,vi(N));
-        FR(i,N)FR(j,N)cin>>g[i][j];
-        DSU dsu(2*N);
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(g[r][c]>g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c)){
-                        dsu.merge(r,c+N);
-                        dsu.merge(c,r+N);
-                    }
-                }else if(g[r][c]<g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c+N)){
-                        dsu.merge(r,c);
-                        dsu.merge(r+N,c+N);
-                    }
-                }
-            }
+    int N; cin>>N;
+    vvi sq(N,vi(N,0));
+    auto add = [&](int x, int y){
+        if(!in(x,N)||!in(y,N))return false;
+//        cerr<<x<<" "<<y<<endl;
+//        cerr<<sq[x][y]<<endl;
+        return (++sq[x][y])==4;
+    };
+    int player = 0;
+    vi scores(2,0);
+    FR(i,2*N*(N-1)){
+        int READ(x1,y1,x2,y2);x1--;y1--;x2--;y2--;
+        cout<<(player==0?'A':'B');
+        if(x1>x2||y1<y2){
+            swap(x1,x2); swap(y1,y2);
         }
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(dsu.par(r)==dsu.par(c+N)){
-                    //swap!
-                    swap(g[r][c],g[c][r]);
-                }
-            }
+        int captured;
+        if(x1==x2){
+            captured=add(x1-1,y1)+add(x1,y1);
+        }else{
+            captured = add(x1,y1+1)+add(x1,y1);
         }
-        print(g);
+        if(captured){
+            scores[player]+=captured;
+        }else{
+            player^=1;
+        }
 
     }
+    cout<<endl;
+    cout<<scores[0]<<" "<<scores[1]<<endl;
+
     return 0;
 }
-
-/*
- *
-1
-3
-2 2 2
-1 2 2
-1 1 2
-
-1
-5
-0 1 1 1 1
-0 0 1 1 1
-0 0 0 1 1
-1 1 1 0 0
-0 1 1 1 0
-
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
- */

@@ -79,91 +79,35 @@ void setmin(T &a, T b) { if (b < a) a = b; }
 
 */
 
-void print(vvi& g){
-    FR(i,sz(g))FR(j,sz(g))cout<<g[i][j]<<" \n"[j==sz(g)-1];
-}
-struct DSU{
-    vi ar;
-    DSU(int N){ //NOLINT
-        ar.resize(N,-1);
-    }
-    int par(int a){
-        return ar[a]<0?a:ar[a]=par(ar[a]);
-    }
-    void merge(int a, int b){
-        a = par(a);
-        b = par(b);
-        if(a!=b){
-            if(ar[a]>ar[b])swap(a,b);
-            ar[a]+=ar[b];
-            ar[b] = a;
-        }
-    }
-};
 int main() {
     fast;
+    int READ(N,M);
+    string READ(A,B);
+    ll ans = 0;
+    ll prefix = 0;
+    MOD = 998244353;
 
-    int T; cin>>T;
-    FR(t,T){
-        int N; cin>>N;
-        vvi g(N,vi(N));
-        FR(i,N)FR(j,N)cin>>g[i][j];
-        DSU dsu(2*N);
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(g[r][c]>g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c)){
-                        dsu.merge(r,c+N);
-                        dsu.merge(c,r+N);
-                    }
-                }else if(g[r][c]<g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c+N)){
-                        dsu.merge(r,c);
-                        dsu.merge(r+N,c+N);
-                    }
-                }
-            }
-        }
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(dsu.par(r)==dsu.par(c+N)){
-                    //swap!
-                    swap(g[r][c],g[c][r]);
-                }
-            }
-        }
-        print(g);
+    vl p2(N+1,1);
+    FOR(i,1,sz(p2))p2[i] = p2[i-1]*2%MOD;
 
+    if(M>N){
+        FR(i,M-N)prefix+=B[i]-'0';
     }
+
+    FR(i,N){
+        int j = i+(M-N);
+        if(j>=0)prefix+=B[j]-'0';
+        if(A[i]=='1'){
+            ans+=p2[N-i-1]*prefix%MOD;
+            ans%=MOD;
+        }
+    }
+    cout<<ans<<endl;
+
     return 0;
 }
-
 /*
- *
-1
-3
-2 2 2
-1 2 2
-1 1 2
-
-1
-5
-0 1 1 1 1
-0 0 1 1 1
-0 0 0 1 1
-1 1 1 0 0
-0 1 1 1 0
-
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
- */
+THINGS TO CHECK BEFORE SUBMITTING:
+ Corner cases? n=0,1?
+ Possible chance for overflow?
+*/

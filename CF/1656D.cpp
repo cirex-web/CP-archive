@@ -22,6 +22,7 @@ auto &read(Args &...args) { return (cin >> ... >> args); }
 #define sz(x) ((int)(x.size()))
 #define f first
 #define s second
+
 #define all(x) x.begin(), x.end()
 #define rall(x) x.rbegin(), x.rend()
 #define in(r, R) (r>=0&&r<R)
@@ -60,6 +61,8 @@ void setmin(T &a, T b) { if (b < a) a = b; }
 
 /*Insights
 
+Perhaps try flipping the problem around? (ex. instead of trying to find some K that satisfies N, find some N that satisfy K)
+
 
 */
 
@@ -73,97 +76,34 @@ void setmin(T &a, T b) { if (b < a) a = b; }
 
 
 */
-// TAG: 
+// TAG:
 /*
 
 
 */
 
-void print(vvi& g){
-    FR(i,sz(g))FR(j,sz(g))cout<<g[i][j]<<" \n"[j==sz(g)-1];
-}
-struct DSU{
-    vi ar;
-    DSU(int N){ //NOLINT
-        ar.resize(N,-1);
-    }
-    int par(int a){
-        return ar[a]<0?a:ar[a]=par(ar[a]);
-    }
-    void merge(int a, int b){
-        a = par(a);
-        b = par(b);
-        if(a!=b){
-            if(ar[a]>ar[b])swap(a,b);
-            ar[a]+=ar[b];
-            ar[b] = a;
-        }
-    }
-};
 int main() {
     fast;
-
     int T; cin>>T;
     FR(t,T){
-        int N; cin>>N;
-        vvi g(N,vi(N));
-        FR(i,N)FR(j,N)cin>>g[i][j];
-        DSU dsu(2*N);
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(g[r][c]>g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c)){
-                        dsu.merge(r,c+N);
-                        dsu.merge(c,r+N);
-                    }
-                }else if(g[r][c]<g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c+N)){
-                        dsu.merge(r,c);
-                        dsu.merge(r+N,c+N);
-                    }
-                }
+        ll READ(N);ll cN = N;
+        ll k1 = 2;
+        while(cN%2==0){
+            k1<<=1;
+            cN>>=1;
+        }
+        if(k1<sqrt(LLONG_MAX)&&k1*(k1+1)/2<=N){
+            cout<<k1<<endl;
+        }else{
+            ll k2 = 2*N/k1;
+//            cerr<<2*N<<" "<<k2<<endl;
+            if(k2!=1){
+                cout<<k2<<endl; //validated by math
+            }else{
+                cout<<-1<<endl;
             }
         }
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(dsu.par(r)==dsu.par(c+N)){
-                    //swap!
-                    swap(g[r][c],g[c][r]);
-                }
-            }
-        }
-        print(g);
-
     }
+
     return 0;
 }
-
-/*
- *
-1
-3
-2 2 2
-1 2 2
-1 1 2
-
-1
-5
-0 1 1 1 1
-0 0 1 1 1
-0 0 0 1 1
-1 1 1 0 0
-0 1 1 1 0
-
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
- */

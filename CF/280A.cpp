@@ -113,7 +113,7 @@ struct side{
 int main() {
     fast;
     double W,H,ang; cin>>W>>H>>ang;
-//    if(W<H)swap(W,H); //TODO necessary?
+//    if(W<H)swap(W,H); //
     vector<pdd> pts = {{W/2,-H/2},{W/2,H/2},{-W/2,H/2},{-W/2,-H/2}};
     ang = min(ang,180-ang);
     cout<<setprecision(20);

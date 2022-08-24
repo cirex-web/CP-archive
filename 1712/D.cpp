@@ -79,91 +79,52 @@ void setmin(T &a, T b) { if (b < a) a = b; }
 
 */
 
-void print(vvi& g){
-    FR(i,sz(g))FR(j,sz(g))cout<<g[i][j]<<" \n"[j==sz(g)-1];
-}
-struct DSU{
-    vi ar;
-    DSU(int N){ //NOLINT
-        ar.resize(N,-1);
-    }
-    int par(int a){
-        return ar[a]<0?a:ar[a]=par(ar[a]);
-    }
-    void merge(int a, int b){
-        a = par(a);
-        b = par(b);
-        if(a!=b){
-            if(ar[a]>ar[b])swap(a,b);
-            ar[a]+=ar[b];
-            ar[b] = a;
-        }
-    }
-};
 int main() {
     fast;
-
     int T; cin>>T;
     FR(t,T){
-        int N; cin>>N;
-        vvi g(N,vi(N));
-        FR(i,N)FR(j,N)cin>>g[i][j];
-        DSU dsu(2*N);
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(g[r][c]>g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c)){
-                        dsu.merge(r,c+N);
-                        dsu.merge(c,r+N);
-                    }
-                }else if(g[r][c]<g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c+N)){
-                        dsu.merge(r,c);
-                        dsu.merge(r+N,c+N);
-                    }
-                }
-            }
+        int READ(N,K);
+        vi ar(N); FR(i,N)cin>>ar[i];
+        int consec = 0;
+        FR(i,N-1){
+            setmax(consec,(min(ar[i],ar[i+1])));
         }
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(dsu.par(r)==dsu.par(c+N)){
-                    //swap!
-                    swap(g[r][c],g[c][r]);
-                }
-            }
-        }
-        print(g);
+        vi sorted = ar;sorted.pb(1e9);
+        sort(all(sorted));
+        int ans = -1;
+        FR(i,N){
+            int curConsec = consec;
+            if(i<N-1)setmax(curConsec,ar[i+1]);
+            if(i)setmax(curConsec,ar[i-1]);
+            int j = lower_bound(all(sorted),ar[i])-sorted.begin();
+            int minVal = sorted[K-1];
 
+            if(j<=K-1){
+                minVal = sorted[K];
+            }
+//            cerr<<curConsec<<" "<<minVal<<endl;
+            ans = max(ans,min(curConsec,2*minVal));
+
+        }
+        FR(i,N-1){
+            if(K<2)break;
+            int i1 = lower_bound(all(sorted),ar[i])-sorted.begin();
+            int i2 = lower_bound(all(sorted),ar[i+1])-sorted.begin();
+            if(i1==i2)i2++;
+            int nK = K-2;
+            sorted[i1] = 0;
+            sorted[i2] = 0;
+            if(i1<=nK)nK++;
+            if(i2<=nK)nK++;
+            while(nK<=N&&sorted[nK]==0)nK++;
+            ans = max(ans,min(int(1e9),2*sorted[min(N,nK)]));
+            sorted[i1] = ar[i];
+            sorted[i2] = ar[i+1];
+//            FR(i,N)cerr<<sorted[i]<<" \n"[i==N-1];
+        }
+        assert(ans!=-1);
+        cout<<ans<<endl;
     }
+
     return 0;
 }
-
-/*
- *
-1
-3
-2 2 2
-1 2 2
-1 1 2
-
-1
-5
-0 1 1 1 1
-0 0 1 1 1
-0 0 0 1 1
-1 1 1 0 0
-0 1 1 1 0
-
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
- */

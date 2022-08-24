@@ -65,6 +65,7 @@ void setmin(T &a, T b) { if (b < a) a = b; }
 
 /*Debugging
 
+ Actually test your code maybe?
 
 */
 
@@ -79,91 +80,49 @@ void setmin(T &a, T b) { if (b < a) a = b; }
 
 */
 
-void print(vvi& g){
-    FR(i,sz(g))FR(j,sz(g))cout<<g[i][j]<<" \n"[j==sz(g)-1];
-}
-struct DSU{
-    vi ar;
-    DSU(int N){ //NOLINT
-        ar.resize(N,-1);
-    }
-    int par(int a){
-        return ar[a]<0?a:ar[a]=par(ar[a]);
-    }
-    void merge(int a, int b){
-        a = par(a);
-        b = par(b);
-        if(a!=b){
-            if(ar[a]>ar[b])swap(a,b);
-            ar[a]+=ar[b];
-            ar[b] = a;
-        }
-    }
-};
+
 int main() {
     fast;
-
-    int T; cin>>T;
-    FR(t,T){
-        int N; cin>>N;
-        vvi g(N,vi(N));
-        FR(i,N)FR(j,N)cin>>g[i][j];
-        DSU dsu(2*N);
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(g[r][c]>g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c)){
-                        dsu.merge(r,c+N);
-                        dsu.merge(c,r+N);
-                    }
-                }else if(g[r][c]<g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c+N)){
-                        dsu.merge(r,c);
-                        dsu.merge(r+N,c+N);
-                    }
-                }
-            }
-        }
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(dsu.par(r)==dsu.par(c+N)){
-                    //swap!
-                    swap(g[r][c],g[c][r]);
-                }
-            }
-        }
-        print(g);
-
+    int READ(N,Q);
+    vi ar = {-1};
+    FR(i,N){
+        int READ(n);
+        ar.pb(n);
     }
+    vl dp(N+1,0);
+    ll tot = 0;
+    FORE(i,1,N){
+        dp[i] = dp[i-1];
+        if(ar[i]!=ar[i-1]){
+            dp[i] += i-1;
+        }
+        dp[i]++; //for current
+//        cerr<<dp[i]<<endl;
+        tot+=dp[i];
+    }
+//    cerr<<tot<<endl;
+    FR(q,Q){
+        int READ(i,x);
+        if(ar[i]!=x){
+            int px = ar[i];
+            ar[i] = x;
+            if(ar[i-1]==x){
+                tot-=ll(i-1)*(N-i+1);
+            }
+            if(px==ar[i-1]&&x!=ar[i-1]){
+                tot+=ll(i-1)*(N-i+1);
+            }
+            if(i<N){
+                if(x==ar[i+1]){
+                    tot-=ll(i)*(N-i);
+                }
+                if(px==ar[i+1]&&x!=ar[i+1]){
+                    tot+=ll(i)*(N-i);
+                }
+            }
+        }
+        cout<<tot<<endl;
+    }
+
     return 0;
 }
-
-/*
- *
-1
-3
-2 2 2
-1 2 2
-1 1 2
-
-1
-5
-0 1 1 1 1
-0 0 1 1 1
-0 0 0 1 1
-1 1 1 0 0
-0 1 1 1 0
-
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
- */

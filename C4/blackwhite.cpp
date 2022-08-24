@@ -38,7 +38,7 @@ int main(){
                 }
             }
 
-            if(sz(activePlayers)<=2)dp[mask] = 0; //TODO: right?
+            if(sz(activePlayers)<=2)dp[mask] = 0;
             else{
                 dp[mask]=1; //at least the current game
                 double someoneOutChance = 0;

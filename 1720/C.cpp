@@ -57,7 +57,14 @@ void setmax(T &a, T b) { if (b > a) a = b; }
 
 template<typename T>
 void setmin(T &a, T b) { if (b < a) a = b; }
-
+//
+//auto vec(auto elem, size_t sz, auto... dim) {
+//    if constexpr (sizeof...(dim) == 0) {
+//        return vector(sz, elem);
+//    } else {
+//        return vector(sz, vec(elem, dim...));
+//    }
+//}
 /*Insights
 
 
@@ -79,91 +86,37 @@ void setmin(T &a, T b) { if (b < a) a = b; }
 
 */
 
-void print(vvi& g){
-    FR(i,sz(g))FR(j,sz(g))cout<<g[i][j]<<" \n"[j==sz(g)-1];
+int v(char c){
+    return c-'0';
 }
-struct DSU{
-    vi ar;
-    DSU(int N){ //NOLINT
-        ar.resize(N,-1);
-    }
-    int par(int a){
-        return ar[a]<0?a:ar[a]=par(ar[a]);
-    }
-    void merge(int a, int b){
-        a = par(a);
-        b = par(b);
-        if(a!=b){
-            if(ar[a]>ar[b])swap(a,b);
-            ar[a]+=ar[b];
-            ar[b] = a;
-        }
-    }
-};
 int main() {
     fast;
-
     int T; cin>>T;
     FR(t,T){
-        int N; cin>>N;
-        vvi g(N,vi(N));
-        FR(i,N)FR(j,N)cin>>g[i][j];
-        DSU dsu(2*N);
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(g[r][c]>g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c)){
-                        dsu.merge(r,c+N);
-                        dsu.merge(c,r+N);
-                    }
-                }else if(g[r][c]<g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c+N)){
-                        dsu.merge(r,c);
-                        dsu.merge(r+N,c+N);
-                    }
+        int READ(R,C);
+        vs g(R);
+        FR(r,R)cin>>g[r];
+        int ans = 0;
+        int minReduce = INT_MAX;
+        FR(r,R)FR(c,C){
+            ans+=g[r][c]=='1';
+            if(r<R-1&&c<C-1){
+                int square = v(g[r][c])+v(g[r+1][c])+v(g[r][c+1])+v(g[r+1][c+1]);
+                if(square){
+                    minReduce = min(minReduce,max(0,square-2)); //skip 1
                 }
+//                cerr<<r<<" "<<c<<" "<<square<<endl;
             }
         }
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(dsu.par(r)==dsu.par(c+N)){
-                    //swap!
-                    swap(g[r][c],g[c][r]);
-                }
-            }
+        if(!ans){
+            cout<<0<<endl;
+        }else{
+
+            cout<<ans-minReduce<<endl;
         }
-        print(g);
 
     }
+
+
     return 0;
 }
-
-/*
- *
-1
-3
-2 2 2
-1 2 2
-1 1 2
-
-1
-5
-0 1 1 1 1
-0 0 1 1 1
-0 0 0 1 1
-1 1 1 0 0
-0 1 1 1 0
-
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
- */

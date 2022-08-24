@@ -2,6 +2,7 @@
 
 
 #include <bits/stdc++.h>
+#include <numeric>
 
 using namespace std;
 
@@ -12,7 +13,7 @@ auto &read(Args &...args) { return (cin >> ... >> args); }
 #define mp(a, b)(make_pair(a,b))
 #define pb(a) push_back(a)
 #define FORE(i, a, b) for (int i = (a); i <= (b); ++i)
-#define FOR(i, a, b) for (int i = (a); i < (b); ++i)
+#define FOR(i, a, b) for (int i = (a); (i) < (b); ++i)
 #define ROF(i, a, b) for (int i = (a); i >= (b); --i)
 #define RF(i, a) ROF(i,a,0)
 #define FR(i, a) FOR(i,0,a)
@@ -24,7 +25,7 @@ auto &read(Args &...args) { return (cin >> ... >> args); }
 #define s second
 #define all(x) x.begin(), x.end()
 #define rall(x) x.rbegin(), x.rend()
-#define in(r, R) (r>=0&&r<R)
+#define in(r, R) ((r)>=0&&(r)<R)
 
 using ll = long long;
 using ull = unsigned long long;
@@ -73,97 +74,62 @@ void setmin(T &a, T b) { if (b < a) a = b; }
 
 
 */
-// TAG: 
+// TAG:
 /*
 
 
 */
+ll expo(ll n, ll pow){
+    if(pow<=0)return 1;
+    ll res = pow%2?n:1;
+    ll half = expo(n,pow/2);
+    return res*half%MOD*half%MOD;
 
-void print(vvi& g){
-    FR(i,sz(g))FR(j,sz(g))cout<<g[i][j]<<" \n"[j==sz(g)-1];
 }
-struct DSU{
-    vi ar;
-    DSU(int N){ //NOLINT
-        ar.resize(N,-1);
-    }
-    int par(int a){
-        return ar[a]<0?a:ar[a]=par(ar[a]);
-    }
-    void merge(int a, int b){
-        a = par(a);
-        b = par(b);
-        if(a!=b){
-            if(ar[a]>ar[b])swap(a,b);
-            ar[a]+=ar[b];
-            ar[b] = a;
-        }
-    }
-};
+ll inv(ll n){
+    return expo(n,MOD-2);
+}
 int main() {
     fast;
-
     int T; cin>>T;
+    MOD = 998244353;
     FR(t,T){
         int N; cin>>N;
-        vvi g(N,vi(N));
-        FR(i,N)FR(j,N)cin>>g[i][j];
-        DSU dsu(2*N);
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(g[r][c]>g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c)){
-                        dsu.merge(r,c+N);
-                        dsu.merge(c,r+N);
-                    }
-                }else if(g[r][c]<g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c+N)){
-                        dsu.merge(r,c);
-                        dsu.merge(r+N,c+N);
-                    }
-                }
-            }
+        map<pii,pll> edge;
+        vvi g(N);
+        FR(i,N-1){
+            int READ(a,b,x,y);a--;b--;
+            edge[mp(a,b)] = mp(x,y);
+            edge[mp(b,a)] = mp(y,x);
+            g[a].pb(b);
+            g[b].pb(a);
         }
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(dsu.par(r)==dsu.par(c+N)){
-                    //swap!
-                    swap(g[r][c],g[c][r]);
-                }
-            }
-        }
-        print(g);
+        auto dfs = [&](auto&& self,int a, int par)->pll{
+            vl sums,nums;
+            ll lcm = 1;
+            for(int b: g[a]){
+                if(b==par)continue;
+                auto [val,sum] = self(self,b,a);
 
+                auto [r1,r2] = edge[mp(b,a)];
+                ll newVal = val*inv(gcd(val,r1))%MOD*r1%MOD;
+                sums.pb(newVal*inv(val)%MOD*sum%MOD); //assuming val is already included in sum
+                ll curVal = newVal*inv(r1)%MOD*r2%MOD;
+                nums.pb(curVal);
+                lcm = lcm*inv(gcd(lcm,curVal))%MOD*curVal%MOD; //can you find lcm while under mod??
+            }
+            ll sum = lcm;
+            FR(i,sz(sums)){
+                ll fac = lcm*inv(nums[i])%MOD;
+                sum+=sums[i]*fac%MOD;
+                sum%=MOD;
+            }
+//            cerr<<sum<<endl;
+//            cerr<<a<<" "<<lcm<<" "<<sum<<endl;
+            return {lcm,sum};
+        };
+        cout<<dfs(dfs,0,-1).s<<endl;
     }
+
     return 0;
 }
-
-/*
- *
-1
-3
-2 2 2
-1 2 2
-1 1 2
-
-1
-5
-0 1 1 1 1
-0 0 1 1 1
-0 0 0 1 1
-1 1 1 0 0
-0 1 1 1 0
-
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
- */

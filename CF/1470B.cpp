@@ -2,7 +2,7 @@
 
 
 #include <bits/stdc++.h>
-
+#include <unordered_map>
 using namespace std;
 
 template<class ...Args>
@@ -59,7 +59,7 @@ template<typename T>
 void setmin(T &a, T b) { if (b < a) a = b; }
 
 /*Insights
-
+ok just don't be dumb; if you need to do something extra and it's too slow, ask yourself if you can use what you already have to do the same thing.
 
 */
 
@@ -79,91 +79,53 @@ void setmin(T &a, T b) { if (b < a) a = b; }
 
 */
 
-void print(vvi& g){
-    FR(i,sz(g))FR(j,sz(g))cout<<g[i][j]<<" \n"[j==sz(g)-1];
-}
-struct DSU{
-    vi ar;
-    DSU(int N){ //NOLINT
-        ar.resize(N,-1);
-    }
-    int par(int a){
-        return ar[a]<0?a:ar[a]=par(ar[a]);
-    }
-    void merge(int a, int b){
-        a = par(a);
-        b = par(b);
-        if(a!=b){
-            if(ar[a]>ar[b])swap(a,b);
-            ar[a]+=ar[b];
-            ar[b] = a;
-        }
-    }
-};
 int main() {
     fast;
-
+    vi fac(1000001,1);
+    FOR(i,2,sz(fac)){
+        if(fac[i]==1){
+            for(int j = i; j<sz(fac); j+=i){
+                fac[j] = i;
+            }
+        }
+    }
     int T; cin>>T;
     FR(t,T){
         int N; cin>>N;
-        vvi g(N,vi(N));
-        FR(i,N)FR(j,N)cin>>g[i][j];
-        DSU dsu(2*N);
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(g[r][c]>g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c)){
-                        dsu.merge(r,c+N);
-                        dsu.merge(c,r+N);
-                    }
-                }else if(g[r][c]<g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c+N)){
-                        dsu.merge(r,c);
-                        dsu.merge(r+N,c+N);
-                    }
+        map<int,int> groups;
+        FR(i,N){
+            int n; cin>>n;
+            int newInt = 1;
+            while(n!=1){
+                int times = 0;
+                int factor = fac[n];
+                while(n!=1&&n%factor==0){
+                    n/=fac[n];
+                    times++;
                 }
+                if(times%2)newInt*=factor;
             }
+            groups[newInt]++;
         }
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(dsu.par(r)==dsu.par(c+N)){
-                    //swap!
-                    swap(g[r][c],g[c][r]);
-                }
+        int cur = 0;
+        int nxt = 0;
+        for(auto [k,v]:groups){
+            if(v%2==0||k==1){
+                nxt+=v;
             }
+            cur = max(cur,v);
         }
-        print(g);
+        nxt = max(nxt,cur);
+        int Q; cin>>Q;
+        FR(q,Q){
+            ll x; cin>>x;
+            if(!x)cout<<cur<<endl;
+            else cout<<nxt<<endl;
+        }
+
+
 
     }
+
     return 0;
 }
-
-/*
- *
-1
-3
-2 2 2
-1 2 2
-1 1 2
-
-1
-5
-0 1 1 1 1
-0 0 1 1 1
-0 0 0 1 1
-1 1 1 0 0
-0 1 1 1 0
-
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
- */

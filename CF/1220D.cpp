@@ -59,12 +59,14 @@ template<typename T>
 void setmin(T &a, T b) { if (b < a) a = b; }
 
 /*Insights
-
-
+If something in the problem seems off, make sure you aren't misunderstanding the entire question
+Consider parity?
 */
+
 
 /*Debugging
 
+1<<i is an int, not a long long. Instead, do 1LL<<i
 
 */
 
@@ -79,91 +81,30 @@ void setmin(T &a, T b) { if (b < a) a = b; }
 
 */
 
-void print(vvi& g){
-    FR(i,sz(g))FR(j,sz(g))cout<<g[i][j]<<" \n"[j==sz(g)-1];
-}
-struct DSU{
-    vi ar;
-    DSU(int N){ //NOLINT
-        ar.resize(N,-1);
-    }
-    int par(int a){
-        return ar[a]<0?a:ar[a]=par(ar[a]);
-    }
-    void merge(int a, int b){
-        a = par(a);
-        b = par(b);
-        if(a!=b){
-            if(ar[a]>ar[b])swap(a,b);
-            ar[a]+=ar[b];
-            ar[b] = a;
-        }
-    }
-};
 int main() {
     fast;
-
-    int T; cin>>T;
-    FR(t,T){
-        int N; cin>>N;
-        vvi g(N,vi(N));
-        FR(i,N)FR(j,N)cin>>g[i][j];
-        DSU dsu(2*N);
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(g[r][c]>g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c)){
-                        dsu.merge(r,c+N);
-                        dsu.merge(c,r+N);
-                    }
-                }else if(g[r][c]<g[c][r]){
-                    if(dsu.par(r)!=dsu.par(c+N)){
-                        dsu.merge(r,c);
-                        dsu.merge(r+N,c+N);
-                    }
-                }
-            }
+    int N; cin>>N;
+    map<int,vl> pows;
+    FR(i,N){
+        ll n; cin>>n;
+        int t = 0;
+        while((n&(1LL<<t))==0){
+            t++;
         }
-        FR(r,N){
-            FOR(c,r+1,N){
-                if(dsu.par(r)==dsu.par(c+N)){
-                    //swap!
-                    swap(g[r][c],g[c][r]);
-                }
-            }
-        }
-        print(g);
-
+        pows[t].pb(n);
     }
+    int lK = 0;
+
+    for(auto [k,nums]:pows){
+        if(sz(pows[lK])<sz(nums)){
+            lK = k;
+        }
+    }
+    cout<<N-sz(pows[lK])<<endl;
+    for(auto [k,nums]:pows){
+        if(k==lK)continue;
+        for(ll n: nums)cout<<n<<endl;
+    }
+
     return 0;
 }
-
-/*
- *
-1
-3
-2 2 2
-1 2 2
-1 1 2
-
-1
-5
-0 1 1 1 1
-0 0 1 1 1
-0 0 0 1 1
-1 1 1 0 0
-0 1 1 1 0
-
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
-
-0 0 0 1 0
-1 0 1 1 1
-1 0 0 1 1
-1 1 1 0 0
-1 1 1 1 0
- */
